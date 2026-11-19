@@ -5,7 +5,7 @@ import plotly.express as px
 import streamlit as st
 
 st.set_page_config(page_title="EduPro Demand & Revenue Forecasting", page_icon="📈", layout="wide")
-ART = Path("artifacts")
+ART = Path("artifacts") if Path("artifacts").exists() else Path(".")
 
 @st.cache_resource
 def load_bundle():
